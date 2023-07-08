@@ -1,0 +1,46 @@
+{
+    "funciones": [
+        {
+            "funcion": {
+                "name": "eval",
+                "regex": "\\beval\\(",
+                "info": "Esta función evalúa una cadena como si fuera código JavaScript, lo que la hace muy peligrosa ya que permite la ejecución de código arbitrario. Es recomendable evitar su uso siempre que sea posible."
+            }
+        },
+        {
+            "funcion": {
+                "name": "document.write()",
+                "regex": "\\bdocument\\.write\\(",
+                "info": "Esta función puede ser utilizada para insertar contenido en una página web, pero también puede ser explotada para inyectar código malicioso en la página."
+            }
+        },
+        {
+            "funcion": {
+                "name": "setTimeout()",
+                "regex": "\\bsetTimeout\\(",
+                "info": "Esta función permite la ejecución de código después de un período de tiempo determinado. Si se le pasa una función maliciosa, puede ser utilizado para ejecutar código malicioso en el contexto de la página."
+            }
+        },
+        {
+            "funcion": {
+                "name": "setInterval",
+                "regex": "\\bsetInterval\\(",
+                "info": "Esta función permite la ejecución de código de forma periódica. Si se le pasa una función maliciosa, puede ser utilizado para ejecutar código malicioso en el contexto de la página."
+            }
+        },
+        {
+            "funcion": {
+                "name": "innerHTML",
+                "regex": "\\binnerHTML\\s*=\\s*[\"'][^\"']*?[<>]+[^\"']*?[\"']",
+                "info": "Esta propiedad se utiliza para obtener o establecer el contenido HTML de un elemento. Si se le pasa contenido malicioso, puede ser utilizado para inyectar código malicioso en la página."
+            }
+        },
+        {
+            "funcion": {
+                "name": "Function",
+                "regex": "\\bFunction\\(",
+                "info": "La función Function() puede ser utilizada para crear nuevas funciones en tiempo de ejecución, lo que la hace muy poderosa pero también muy peligrosa si se le permite aceptar entradas del usuario."
+            }
+        }
+    ]
+}

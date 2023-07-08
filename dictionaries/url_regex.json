@@ -1,0 +1,33 @@
+{
+    "patrones": [
+      {
+        "patron": {
+            "name": "URLs",
+            "regex": "(?:[a-zA-Z]{1,10}://|//)[^\"'<>\\s]+",
+            "info": "Busca URLs que comiencen con una cadena que represente el protocolo HTTP/HTTPS y continúen con cualquier carácter que no sea un espacio en blanco o comillas."
+        }
+      },
+      {
+        "patron": {
+            "name": "Endpoints",
+            "regex": "(?:/|\\./|\\.\\./|\\.\\|\\.\\\\)[^\"'><,;| *()(%%$^/\\\\\\[\\]]+[^\"'><,;|()]{1,}",
+            "info": "Busca endpoints de una ruta relativa que comience con una barra / o puntos y comillas, seguido de cualquier carácter que no sea un espacio en blanco o caracteres especiales."
+        }
+      },
+      {
+        "patron": {
+            "name": "APIs REST",
+            "regex": "[a-zA-Z0-9_\\-]{1,}/[a-zA-Z0-9_\\-]{3,}(?:[\\?|#][^\"'|]{0,})?",
+            "info": "Busca APIs REST, que siguen un patrón de nombre de recurso después de un prefijo de ruta, y pueden tener parámetros opcionales después de ? o #."
+        }
+      },
+      {
+        "patron": {
+            "name": "Archivos Web",
+            "regex": "[a-zA-Z0-9_\\-]{1,}\\.(?:php|asp|aspx|jsp|json|html|js|txt|xml)(?:[\\?|#][^\"'|]{0,})?",
+            "info": "Busca archivos de recursos web que tengan extensiones comunes como .php, .html, etc. y que puedan tener parámetros opcionales después de ? o #."
+        }
+      }
+    ]
+  }
+  
