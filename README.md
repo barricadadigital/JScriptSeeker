@@ -30,6 +30,13 @@ python .\JScriptSeeker.py -u test
 - -s -> Directorio seleccionado si se quiere almacenar el código javascript limpio
 
 ---
+### ¿Qué información extrae?
+
+- Endpoints -> Mediante los regex que se encuentran en los diccionarios "url_regex.json"
+- Funciones vulnerables -> Por ahora hay pocas añadidas, las encuentras en los diccionarios "funciones_vulns_dict.json"
+- Secretos -> Se obtienen de dos formas, por un lado mediante regex, los encuentras en el diccionario "secret_regex.json"; Por otro lado también se obtienen mediante entropía, por defecto en 4.5 aunque puedes modificarlo directamente en el código en find_secrets.py
+
+---
 *****
 EN CONSTRUCCIÓN
 *****
